@@ -1,0 +1,11 @@
+org\step\HooksClass.class
+org\pom\PomSearchHotelPage.class
+org\step\StepDefenitionClass.class
+org\runner\TestRunnerClass.class
+org\step\StepDefenitionClass1.class
+org\base\BaseClass.class
+org\pom\PomBookaHotel.class
+org\step\StepDefenitionClass2.class
+org\pom\PomSelectHotelPage.class
+org\pom\PomClassLogin.class
+org\pomManager\PomManagerClass.class

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Adactin Automation</td>
+      <td>17 May 2023, 17:45</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">org.step.HooksClass.tc01()</td>
+              <td>1</td>
+              <td class="duration" data-value="79416058600">1:19.416</td>
+              <td class="duration" data-value="79416058600">1:19.416</td>
+              <td class="duration" data-value="79416058600">1:19.416</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.step.HooksClass.tc02()</td>
+              <td>1</td>
+              <td class="duration" data-value="277002300">0.277</td>
+              <td class="duration" data-value="277002300">0.277</td>
+              <td class="duration" data-value="277002300">0.277</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.step.StepDefenitionClass.user_should_click_login_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="6160502600">6.160</td>
+              <td class="duration" data-value="6160502600">6.160</td>
+              <td class="duration" data-value="6160502600">6.160</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.step.StepDefenitionClass.user_should_enter_username_and_password_based_on_one_dimensional_map(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="798245900">0.798</td>
+              <td class="duration" data-value="798245900">0.798</td>
+              <td class="duration" data-value="798245900">0.798</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.step.StepDefenitionClass.user_should_verfiy_login_webpage_succesfully()</td>
+              <td>1</td>
+              <td class="duration" data-value="1904100">0.001</td>
+              <td class="duration" data-value="1904100">0.001</td>
+              <td class="duration" data-value="1904100">0.001</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.step.StepDefenitionClass1.user_should_click_search_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="586000">0.000</td>
+              <td class="duration" data-value="586000">0.000</td>
+              <td class="duration" data-value="586000">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.step.StepDefenitionClass1.user_should_enter_the_hotel_check_in_date(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.step.StepDefenitionClass1.user_should_enter_the_hotel_check_out_date(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.step.StepDefenitionClass1.user_should_select_the_adults_per_room(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.step.StepDefenitionClass1.user_should_select_the_children_per_room(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="412800">0.000</td>
+              <td class="duration" data-value="412800">0.000</td>
+              <td class="duration" data-value="412800">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.step.StepDefenitionClass1.user_should_select_the_hotel(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.step.StepDefenitionClass1.user_should_select_the_hotel_location(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="10110000">0.010</td>
+              <td class="duration" data-value="10110000">0.010</td>
+              <td class="duration" data-value="10110000">0.010</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.step.StepDefenitionClass1.user_should_select_the_number_of_rooms(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.step.StepDefenitionClass1.user_should_select_the_roomtype(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="997500">0.000</td>
+              <td class="duration" data-value="997500">0.000</td>
+              <td class="duration" data-value="997500">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.step.StepDefenitionClass2.user_should_click_booknow_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="1000800">0.001</td>
+              <td class="duration" data-value="1000800">0.001</td>
+              <td class="duration" data-value="1000800">0.001</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.step.StepDefenitionClass2.user_should_click_the_continue_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.step.StepDefenitionClass2.user_should_enter_the_address_based_on_one_dimensional_map(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="1004000">0.001</td>
+              <td class="duration" data-value="1004000">0.001</td>
+              <td class="duration" data-value="1004000">0.001</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.step.StepDefenitionClass2.user_should_enter_the_first_name_based_on_one_dimensional_map(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="3998500">0.003</td>
+              <td class="duration" data-value="3998500">0.003</td>
+              <td class="duration" data-value="3998500">0.003</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.step.StepDefenitionClass2.user_should_enter_the_four_digit_one_dimensional_map(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.step.StepDefenitionClass2.user_should_enter_the_last_name_based_on_one_dimensional_list(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="999500">0.000</td>
+              <td class="duration" data-value="999500">0.000</td>
+              <td class="duration" data-value="999500">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.step.StepDefenitionClass2.user_should_enter_the_sixteen_digit_credit_card_number_based_on_one_dimensional_list(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="1006300">0.001</td>
+              <td class="duration" data-value="1006300">0.001</td>
+              <td class="duration" data-value="1006300">0.001</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.step.StepDefenitionClass2.user_should_select_the_credit_card_type_based_on_one_dimensional_map(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.step.StepDefenitionClass2.user_should_select_the_expiry_month_and_expiry_year_two_dimensional_list(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="990800">0.000</td>
+              <td class="duration" data-value="990800">0.000</td>
+              <td class="duration" data-value="990800">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.step.StepDefenitionClass2.user_should_select_the_radio_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>24</td>
+            <td>24</td>
+            <td class="duration">3.611</td>
+            <td class="duration">1:19.416</td>
+            <td class="duration">1:26.674</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
